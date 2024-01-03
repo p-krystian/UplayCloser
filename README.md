@@ -7,3 +7,7 @@ Just download the script and run it like this:
 chmod +x close-uplay.sh
 ./close-uplay.sh wine /path/game.exe
 ```
+## Using with Lutris
+You can easily use the script with Lutris.\
+Just paste the script path into the `Command prefix` field.\
+<img src="screens/lutris-sys-opts.png" alt="Lutris screenshot">
