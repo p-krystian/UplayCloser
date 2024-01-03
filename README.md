@@ -9,5 +9,6 @@ chmod +x close-uplay.sh
 ```
 ## Using with Lutris
 You can easily use the script with Lutris.\
-Just paste the script path into the `Command prefix` field.\
+Just paste the script path into the `Command prefix` field.
+
 <img src="screens/lutris-sys-opts.png" alt="Lutris screenshot">
