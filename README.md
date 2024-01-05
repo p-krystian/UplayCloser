@@ -11,9 +11,9 @@ chmod +x close-uplay.sh
 You can easily use the script with Lutris.\
 Just paste the script path into the `Command prefix` field.
 
-<img src="screens/lutris-sys-opts.png" alt="Lutris screenshot">
+<img src="screens/lutris-sys-opts.png" alt="Lutris system options screenshot">
 
 For this to work, you must provide the path
 to the game executable instead of the Ubisoft Connect.
 
-<img src="screens/lutris-game-opts.png" alt="Lutris screenshot">
+<img src="screens/lutris-game-opts.png" alt="Lutris game options screenshot">
