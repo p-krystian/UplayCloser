@@ -1,5 +1,5 @@
 # Uplay Closer
-A bash script that exits Uplay after game exits.
+A bash script that exits Ubisoft Connect after game exits.
 
 ## How to use
 Just download the script and run it like this:
