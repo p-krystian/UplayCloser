@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ -z "$1" ]; then
-  echo "[CLOSE UPLAY] No command error!"
+  echo "[CLOSE UPLAY] No command given!"
   exit
 fi
 
@@ -12,7 +12,7 @@ GAME=${CMD[0]}
 
 on_run(){
   while true; do
-    if [ $((`pgrep -f "$1" | wc -l`)) -lt 4 ]; then
+    if [ $((`pgrep -f "$1" | wc -l`)) -lt $2 ]; then
       echo "[CLOSE UPLAY] Closing Uplay in 3 secs"
       sleep 3
       kill -SIGTERM $(pgrep -f 'upc.exe')
@@ -26,8 +26,11 @@ on_run(){
 for i in {1..5}; do
   echo "[CLOSE UPLAY] Waiting for game startup... $i/5"
   sleep 60
-  if [ $((`pgrep -f "$GAME" | wc -l`)) -gt 3 ]; then
-    echo "[CLOSE UPLAY] Game started."
-    on_run $GAME
+  if [ $((`pgrep -f "$GAME" | wc -l`)) -gt 2 ]; then
+    echo "[CLOSE UPLAY] Game starting..."
+    sleep 45
+    PROCESSES=($(pgrep -f "$GAME" | wc -l))
+    echo "[CLOSE UPLAY] Game started; Processes: $PROCESSES"
+    on_run $GAME $PROCESSES
   fi
 done
